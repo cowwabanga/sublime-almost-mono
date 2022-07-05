@@ -1,0 +1,114 @@
+{
+	"name": "Almost Mono Gray",
+	"variables" : {
+		"background": 	"#2b2b2b",
+		"foreground": 	"#ffffff",
+		"weak": 		"#aaaaaa",
+		"weaker": 		"#666666",
+		"weakest": 		"#222222",
+		"highlight": 	"#fda50f",
+		"warning":		"#ff0000",
+		"success":		"#00ff00",
+		"string":		"#a7bca4",
+	},
+	"globals": {
+		"background": 				"var(background)",
+		"foreground": 				"var(foreground)",
+		"caret": 					"var(weaker)",
+		"block_caret":				"var(weaker)",
+		"line_highlight": 			"var(weakest)",
+		"misspelling":				"var(warning)",
+		"selection":				"var(highlight)",
+		"selection_border_width": 	"0",
+		"selection_corner_radius": 	"2",
+	},
+	"rules":
+	[
+		{
+			"name": "Entity Name",
+			"scope": "entity.name",
+			"font_style": "bold"
+		},
+		{
+			"name": "Inherited Class",
+			"scope": "entity.other.inherited-class",
+			"font_style": "italic"
+		},
+		{
+			"name": "Text Markup Heading Name",
+			"scope": "entity.name.section",
+			"font_style": "bold"
+		},
+		{
+			"name": "Markup Tag Name",
+			"scope": "entity.name.tag",
+			"font_style": "bold"
+		},
+		{
+			"name": "Markup Tag Attribute",
+			"scope": "entity.other.attribute-name",
+			"font_style": "italic"
+		},
+		{
+			"name": "Variable",
+			"scope": "variable, variable.language, punctuation.definition.variable",
+		},
+		{
+			"name": "Variable Parameter",
+			"scope": "variable.parameter",
+			"font_style": "italic",
+		},
+		{
+			"name": "Invoked Function",
+			"scope": "variable.function",
+			"font_style": "none"
+		},
+		{
+			"name": "Constant",
+			"scope": "constant",
+			"font_style": "italic"
+		},
+		{
+			"name": "Type",
+			"scope": "storage.type",
+			"font_style": "italic"
+		},
+		{
+			"name": "Type Modifier",
+			"scope": "storage.modifier",
+			"font_style": "bold"
+		},
+		// I do not cover support scope
+		// But add it in case I will need to cover this in the future
+		{
+			"name": "Support",
+			"scope": "support"
+		},
+		{
+			"name": "Keyword",
+			"scope": "keyword, keyword.control, keyword.declaration",
+			"font_style": "bold"
+		},
+		{
+			"name": "Keyword operator",
+			"scope": "keyword.operator",
+			"font_style": "none"
+		},
+		{
+			"name": "String",
+			"scope": "string",
+			"foreground": "var(string)"
+		},
+		{
+			"name": "Comment",
+			"scope": "comment",
+			"foreground": "var(weak)",
+			"font_style": "italic"
+		},
+		{
+			"name": "Invalid",
+			"scope": "invalid, invalid.deprecated",
+			"foreground": "var(warning)"
+		}
+	]
+}
